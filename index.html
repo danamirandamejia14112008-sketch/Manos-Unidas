@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrera Solidaria · Fundación Manos Unidas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#inscripcion">Ir al formulario</a>
+
+  <header class="nav">
+    <a class="logo" href="#inicio">Manos Unidas</a>
+    <nav aria-label="Principal">
+      <a href="#fundacion">Fundación</a>
+      <a href="#carrera">Carrera</a>
+      <a href="#patrocinadores">Patrocinadores</a>
+      <a class="btn btn-sm" href="#inscripcion">Inscribirme</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section id="inicio" class="hero">
+      <span class="blob b1" aria-hidden="true"></span>
+      <span class="blob b2" aria-hidden="true"></span>
+      <span class="blob b3" aria-hidden="true"></span>
+      <div class="hero-content">
+        <p class="badge">Evento solidario</p>
+        <h1>Carrera Solidaria <span class="grad">Manos Unidas</span></h1>
+        <p class="meta">
+          <span>📅 <time datetime="2026-12-13">13 de diciembre de 2026</time></span>
+          <span>📍 Parque Central, 8:00 a. m.</span>
+        </p>
+
+        <div class="countdown" id="cuenta" data-fecha="2026-12-13T08:00:00" role="timer" aria-live="off" aria-label="Cuenta regresiva para la carrera">
+          <div class="tile"><strong id="dias">00</strong><span>días</span></div>
+          <div class="tile"><strong id="horas">00</strong><span>horas</span></div>
+          <div class="tile"><strong id="minutos">00</strong><span>minutos</span></div>
+          <div class="tile"><strong id="segundos">00</strong><span>segundos</span></div>
+        </div>
+
+        <a class="btn" href="#inscripcion">Quiero correr</a>
+      </div>
+      <div class="track" aria-hidden="true"><span class="runner">🏃</span></div>
+    </section>
+
+    <!-- FUNDACIÓN -->
+    <section id="fundacion" class="section">
+      <h2>Sobre la fundación</h2>
+      <p class="lead">Desde hace más de 10 años acompañamos a familias que lo necesitan, con educación, alimentación y salud.</p>
+      <div class="grid3">
+        <article class="card c-teal">
+          <h3>Misión</h3>
+          <p>Mejorar la calidad de vida de comunidades vulnerables con programas sostenibles y voluntariado.</p>
+        </article>
+        <article class="card c-coral">
+          <h3>Visión</h3>
+          <p>Ser una red solidaria donde cada persona tenga oportunidades reales de crecer.</p>
+        </article>
+        <article class="card c-sun">
+          <h3>Proyectos realizados</h3>
+          <ul>
+            <li>3 comedores comunitarios</li>
+            <li>Becas para 250 estudiantes</li>
+            <li>12 jornadas de salud gratuitas</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CARRERA -->
+    <section id="carrera" class="section alt">
+      <h2>La carrera</h2>
+      <p class="lead">Elige la categoría que va contigo. Todo lo recaudado se destina a nuestros proyectos.</p>
+      <div class="grid3">
+        <article class="card cat">
+          <span class="km">5 km</span>
+          <h3>Recreativa</h3>
+          <p>Ideal para empezar. Edad mínima: 8 años.</p>
+        </article>
+        <article class="card cat">
+          <span class="km">10 km</span>
+          <h3>Competitiva</h3>
+          <p>Para corredores con experiencia. Edad mínima: 14 años.</p>
+        </article>
+        <article class="card cat">
+          <span class="km">2 km</span>
+          <h3>Familiar</h3>
+          <p>Camina o corre en familia. Edad mínima: 5 años.</p>
+        </article>
+      </div>
+
+      <div class="route">
+        <h3>Recorrido</h3>
+        <ol>
+          <li>Salida: Parque Central</li>
+          <li>Avenida del Río (hidratación en el km 2)</li>
+          <li>Puente Viejo (punto de giro de 10 km)</li>
+          <li>Llegada: Parque Central, con música y refrigerio</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- INSCRIPCIÓN -->
+    <section id="inscripcion" class="section">
+      <h2>Inscripción</h2>
+      <p class="lead">Completa tus datos. Los campos con * son obligatorios.</p>
+
+      <form id="formulario" class="form" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre completo *</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" aria-describedby="err-nombre">
+          <small class="error" id="err-nombre" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="documento">Documento de identidad *</label>
+          <input type="text" id="documento" name="documento" inputmode="numeric" aria-describedby="err-documento">
+          <small class="error" id="err-documento" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="correo">Correo electrónico *</label>
+          <input type="email" id="correo" name="correo" autocomplete="email" aria-describedby="err-correo">
+          <small class="error" id="err-correo" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="telefono">Teléfono *</label>
+          <input type="tel" id="telefono" name="telefono" inputmode="numeric" autocomplete="tel" aria-describedby="err-telefono">
+          <small class="error" id="err-telefono" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="nacimiento">Fecha de nacimiento *</label>
+          <input type="date" id="nacimiento" name="nacimiento" aria-describedby="err-nacimiento">
+          <small class="error" id="err-nacimiento" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="categoria">Categoría *</label>
+          <select id="categoria" name="categoria" aria-describedby="err-categoria">
+            <option value="">Selecciona una opción</option>
+            <option value="5">5 km (desde 8 años)</option>
+            <option value="10">10 km (desde 14 años)</option>
+            <option value="familiar">Familiar (desde 5 años)</option>
+          </select>
+          <small class="error" id="err-categoria" role="alert"></small>
+        </div>
+
+        <div class="field">
+          <label for="talla">Talla de camiseta *</label>
+          <select id="talla" name="talla" aria-describedby="err-talla">
+            <option value="">Selecciona una talla</option>
+            <option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option>
+          </select>
+          <small class="error" id="err-talla" role="alert"></small>
+        </div>
+
+        <button type="submit" class="btn full">Inscribirme</button>
+        <p id="confirmacion" class="ok" role="status" hidden></p>
+      </form>
+    </section>
+
+    <!-- PATROCINADORES -->
+    <section id="patrocinadores" class="section alt">
+      <h2>Patrocinadores</h2>
+      <p class="lead">Gracias a quienes hacen posible esta carrera.</p>
+      <div class="marquee"><div class="marquee-track"><div class="sp" role="img" aria-label="Logotipo de Cruz Verde"><svg viewBox="0 0 150 56" aria-hidden="true"><path d="M20 8h10v12h12v10H30v12H20V30H8V20h12z" fill="#00a651"/><text x="50" y="26" font-size="15" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#00a651">Cruz</text><text x="50" y="43" font-size="15" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#00a651">Verde</text></svg></div><div class="sp" role="img" aria-label="Logotipo de Agua Cristal"><svg viewBox="0 0 150 56" aria-hidden="true"><path d="M24 6C14 20 10 26 10 34a14 14 0 0 0 28 0c0-8-4-14-14-28z" fill="#0090e0"/><text x="46" y="26" font-size="12" font-weight="600" font-family="Poppins,Arial,sans-serif" fill="#0072ce">Agua</text><text x="46" y="43" font-size="16" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#0072ce">Cristal</text></svg></div><div class="sp" role="img" aria-label="Logotipo de Adidas"><svg viewBox="0 0 150 56" aria-hidden="true"><path d="M10 44l10-4 14-26-10 4zM26 44l10-4 20-36-10 4zM42 44l10-4 26-46-10 4z" transform="translate(0 6) scale(.85)" fill="#111"/><text x="62" y="36" font-size="20" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#111">adidas</text></svg></div><div class="sp" role="img" aria-label="Logotipo de Claro"><svg viewBox="0 0 150 56" aria-hidden="true"><circle cx="75" cy="28" r="24" fill="#e30613"/><text x="75" y="34" text-anchor="middle" font-size="17" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#fff">claro</text></svg></div><div class="sp" role="img" aria-label="Logotipo de Betplay"><svg viewBox="0 0 150 56" aria-hidden="true"><rect x="8" y="10" width="134" height="36" rx="18" fill="#ffd400"/><text x="75" y="35" text-anchor="middle" font-size="18" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#1a1a1a">betplay</text></svg></div><div class="sp" aria-hidden="true"><svg viewBox="0 0 150 56" aria-hidden="true"><path d="M20 8h10v12h12v10H30v12H20V30H8V20h12z" fill="#00a651"/><text x="50" y="26" font-size="15" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#00a651">Cruz</text><text x="50" y="43" font-size="15" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#00a651">Verde</text></svg></div><div class="sp" aria-hidden="true"><svg viewBox="0 0 150 56" aria-hidden="true"><path d="M24 6C14 20 10 26 10 34a14 14 0 0 0 28 0c0-8-4-14-14-28z" fill="#0090e0"/><text x="46" y="26" font-size="12" font-weight="600" font-family="Poppins,Arial,sans-serif" fill="#0072ce">Agua</text><text x="46" y="43" font-size="16" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#0072ce">Cristal</text></svg></div><div class="sp" aria-hidden="true"><svg viewBox="0 0 150 56" aria-hidden="true"><path d="M10 44l10-4 14-26-10 4zM26 44l10-4 20-36-10 4zM42 44l10-4 26-46-10 4z" transform="translate(0 6) scale(.85)" fill="#111"/><text x="62" y="36" font-size="20" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#111">adidas</text></svg></div><div class="sp" aria-hidden="true"><svg viewBox="0 0 150 56" aria-hidden="true"><circle cx="75" cy="28" r="24" fill="#e30613"/><text x="75" y="34" text-anchor="middle" font-size="17" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#fff">claro</text></svg></div><div class="sp" aria-hidden="true"><svg viewBox="0 0 150 56" aria-hidden="true"><rect x="8" y="10" width="134" height="36" rx="18" fill="#ffd400"/><text x="75" y="35" text-anchor="middle" font-size="18" font-weight="800" font-family="Poppins,Arial,sans-serif" fill="#1a1a1a">betplay</text></svg></div></div></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Fundación Manos Unidas · contacto@manosunidas.org</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
